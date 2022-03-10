@@ -42,12 +42,12 @@ public class CollectionTestSuite {
             //lista.add(2);
            // lista.add(5);
            // lista.add(8);
-
+             obiekt.exterminate(lista);
              Assertions.assertEquals(lista3,lista);
             System.out.println("lista jest pusta");
 
 
-                //obiekt.exterminate(lista);
+
 
 
 
@@ -57,17 +57,18 @@ public class CollectionTestSuite {
         void testOddNumbersExterminatorNormalList()
         {
             List<Integer> lista2 = new ArrayList<>();
-            List<Integer> wynik = new ArrayList<>();
+            List<Integer> lista4 = new ArrayList<>();
+
             lista2.add(1);
             lista2.add(3);
-            lista2.add(7);
-            lista2.add(10);
+            lista4.add(1);
+            lista4.add(3);
+            //lista2.add(7);
+
             OddNumbersExterminator obiekt2 = new OddNumbersExterminator();
-            wynik=obiekt2.exterminate(lista2);
-            Assertions.assertTrue(wynik!=null);
-            {
-                System.out.println("parzyste liczby to: "+wynik);
-            }
+            obiekt2.exterminate(lista2);
+            Assertions.assertEquals(lista4,lista2);
+            System.out.println("Wyglada ok");
             }
 
 

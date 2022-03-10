@@ -13,10 +13,11 @@ public class OddNumbersExterminator {
 
 
         }
-        if (nowa.size()>0) {
+//        if (nowa.size()>0) {
+//            return nowa;
+//        }
+        //else
             return nowa;
-        }
-        else return nowa=null;
 
     }
 
