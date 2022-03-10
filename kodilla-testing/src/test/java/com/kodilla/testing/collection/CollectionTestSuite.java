@@ -33,23 +33,23 @@ public class CollectionTestSuite {
 
         @DisplayName("Check if list empty")
         @Test
-        void testOddNumbersExterminatorEmptyList()
-        {
+        void testOddNumbersExterminatorEmptyList() {
             OddNumbersExterminator obiekt = new OddNumbersExterminator();
             List<Integer> lista = new ArrayList<>();
-            lista.add(2);
-            lista.add(5);
-            lista.add(8);
+            List<Integer> lista3 = new ArrayList<>();
 
-            if(lista.size()!=0) {
-                obiekt.exterminate(lista);
-                System.out.println("Lista nie jest pusta");
-            }
 
-            else
-            {
-                System.out.println("Lista jest pusta");
-            }
+            //lista.add(2);
+           // lista.add(5);
+           // lista.add(8);
+
+             Assertions.assertEquals(lista3,lista);
+            System.out.println("lista jest pusta");
+
+
+                //obiekt.exterminate(lista);
+
+
 
         }
         @DisplayName("CheckIfEven")
@@ -64,9 +64,14 @@ public class CollectionTestSuite {
             lista2.add(10);
             OddNumbersExterminator obiekt2 = new OddNumbersExterminator();
             wynik=obiekt2.exterminate(lista2);
-            System.out.println("parzyste liczby to: "+wynik);
-        }
+            Assertions.assertTrue(wynik!=null);
+            {
+                System.out.println("parzyste liczby to: "+wynik);
+            }
+            }
+
 
 
 }
+
 

@@ -13,8 +13,13 @@ public class OddNumbersExterminator {
 
 
         }
-        //System.out.println("liczby parzyste to: "+nowa);
-        return nowa;
+        if (nowa.size()>0) {
+            return nowa;
+        }
+        else return nowa=null;
+
     }
+
+
 }
 
