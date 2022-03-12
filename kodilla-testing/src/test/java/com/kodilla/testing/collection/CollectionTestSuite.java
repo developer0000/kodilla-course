@@ -45,12 +45,6 @@ public class CollectionTestSuite {
              obiekt.exterminate(lista);
              Assertions.assertEquals(lista3,lista);
             System.out.println("lista jest pusta");
-
-
-
-
-
-
         }
         @DisplayName("CheckIfEven")
         @Test
@@ -58,16 +52,17 @@ public class CollectionTestSuite {
         {
             List<Integer> lista2 = new ArrayList<>();
             List<Integer> lista4 = new ArrayList<>();
+            List<Integer> lista5 = new ArrayList<>();
 
             lista2.add(1);
             lista2.add(3);
-            lista4.add(1);
-            lista4.add(3);
-            //lista2.add(7);
 
             OddNumbersExterminator obiekt2 = new OddNumbersExterminator();
-            obiekt2.exterminate(lista2);
-            Assertions.assertEquals(lista4,lista2);
+            lista5=obiekt2.exterminate(lista2);
+            int i=lista5.size();
+
+
+            Assertions.assertEquals(0,i);
             System.out.println("Wyglada ok");
             }
 
