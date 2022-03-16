@@ -61,4 +61,34 @@ public class ShapeCollectorTestSuite {
     }
 
 
+    @DisplayName("showFigure")
+    @Test
+    void testShowFigure() {
+        List<Shape> lista = new ArrayList<>();
+        Circle kolo = new Circle();
+        Triangle trojkat = new Triangle();
+        lista.add(kolo);
+        lista.add(trojkat);
+        //System.out.println(lista);
+        Assertions.assertEquals(2,lista.size());
+    }
+
+
+    @DisplayName("getFigures")
+    @Test
+    void testgetFigure() {
+        List<Shape> lista = new ArrayList<>();
+        Circle kolo = new Circle();
+        Circle kolo2 = new Circle();
+        lista.add(kolo);
+        //lista.add(kolo2);
+
+        Assertions.assertEquals(1,lista.get(0));
+
+
+
+
+
+
+    }
 }

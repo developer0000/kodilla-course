@@ -1,12 +1,12 @@
-package com.kodilla.testing;
-import com.kodilla.testing.calculator.Calculator;
-import com.kodilla.testing.user.SimpleUser;
-
-import java.math.BigInteger;
-
-public class TestingMain {
-
-    public static void main(String[] args) {
+//package com.kodilla.testing;
+//import com.kodilla.testing.calculator.Calculator;
+//import com.kodilla.testing.user.SimpleUser;
+//
+//import java.math.BigInteger;
+//
+//public class TestingMain {
+//
+//    public static void main(String[] args) {
 //        int minimum = -2147483648;
 //        int maximum = 2147483647;
 //        Calculator calculator = new Calculator();
@@ -35,6 +35,6 @@ public class TestingMain {
 //            System.out.println(" ROZNICA: blad wprowadzonych danych, "+"roznica nie  moze przekroczyc wartosci granicznej zminnej typu int -2147483648");
 //
 //        }
-
-    }
-}
+//
+//    }
+//}
