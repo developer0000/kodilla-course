@@ -47,8 +47,18 @@ public class WeatherForecast {
         double k=i/2;
         double a=Math.round(k);
         int p=(int)a;
-        return resultMap.get(p);
+        if(p%2==0) {
+            return resultMap.get(p);
+        }
+        else
+        {
+           // int i=resultMap.get(p);
 
+            //int p =resultMap.get(p+1);
+            double suma= (resultMap.get(p)+resultMap.get(p+1));
+            return  suma/2;
+        }
     }
+
 }
 

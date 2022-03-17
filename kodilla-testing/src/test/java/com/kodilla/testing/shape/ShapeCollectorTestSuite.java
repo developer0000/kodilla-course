@@ -33,30 +33,34 @@ public class ShapeCollectorTestSuite {
     @Test
     void testAddFigure() {
 
-        List<Shape> lista = new ArrayList<>();
+
+        ShapeCollector shape=new ShapeCollector();
+        //List<Shape> lista = new ArrayList<>();
         Circle kolo= new Circle();
 
-        lista.add(kolo) ;
-        int i=lista.size();
-
-        Assertions.assertEquals(1,i);
+        shape.addFigure(kolo); ;
+        int k =shape.getSize();
+        Assertions.assertEquals(1,k);
 
     }
 
     @DisplayName("removeFigure")
     @Test
     void testRemoveFigure() {
+        ShapeCollector shape=new ShapeCollector();
 
-        List<Shape> lista = new ArrayList<>();
         Circle kolo= new Circle();
-        Triangle trojkat = new Triangle();
-        lista.add(kolo) ;
-        lista.add(trojkat);
-        int i= lista.size();
-        lista.remove(kolo) ;
-        int j= lista.size();
+        Circle kolo1= new Circle();
+        shape.addFigure(kolo); ;
+        shape.addFigure(kolo1);
 
-        Assertions.assertFalse(j==i);
+
+        int i= shape.getSize();
+        Assertions.assertEquals(2,i);
+        shape.removeFigure(kolo); ;
+        int j= shape.getSize();
+
+        Assertions.assertEquals(1,j);
 
     }
 
@@ -77,15 +81,27 @@ public class ShapeCollectorTestSuite {
     @DisplayName("getFigures")
     @Test
     void testgetFigure() {
-        List<Shape> lista = new ArrayList<>();
+        ShapeCollector shape = new ShapeCollector();
         Circle kolo = new Circle();
         Circle kolo2 = new Circle();
-        lista.add(kolo);
-        //lista.add(kolo2);
+        shape.addFigure(kolo);
+        shape.addFigure(kolo2);
+        Shape i = shape.getFigure(1);
 
-        Assertions.assertEquals(1,lista.get(0));
+        Assertions.assertNotNull(i);
 
+    }
+        @DisplayName("getFigures-1")
+        @Test
+        void testgetFigureminus() {
+            ShapeCollector shape=new ShapeCollector();
+            Circle kolo = new Circle();
+            Circle kolo2 = new Circle();
+            shape.addFigure(kolo);
+            shape.addFigure(kolo2);
+            Shape i=shape.getFigure(-1);
 
+            Assertions.assertNull(i);
 
 
 

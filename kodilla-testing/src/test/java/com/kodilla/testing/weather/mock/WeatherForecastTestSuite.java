@@ -14,8 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
   public class WeatherForecastTestSuite {
 
-    @Mock
-    private Temperatures temperaturesMock;
+
     @DisplayName("Fotecast")
     @Test
         // [8]
@@ -84,6 +83,28 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
         }
 
+        @DisplayName("MedianTempEven")
+        @Test
+        void testMedianTempEven() {
+
+            Temperatures temperaturesMock = mock(Temperatures.class);
+            Map<String, Double> temperaturesMap = new HashMap<>();                   // [14]
+
+            temperaturesMap.put("Rzeszow", 1.0);                                      // [15]
+            temperaturesMap.put("Krakow", 2.0);                                       // [16]
+            temperaturesMap.put("Wroclaw", 3.0);                                      // [17]
+           //temperaturesMap.put("Warszawa", 25.2);                                     // [18]
+            temperaturesMap.put("Gdansk", 4.0);                                       // [19]
+            when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);      // [20]
+
+
+            WeatherForecast weatherForecast2 = new WeatherForecast(temperaturesMock);
+            double d = weatherForecast2.medianTemperature(temperaturesMock);
+            //System.out.println(d);
+            double test = 2.5;
+            Assertions.assertEquals(test, d);
+
+        }
 
 
 

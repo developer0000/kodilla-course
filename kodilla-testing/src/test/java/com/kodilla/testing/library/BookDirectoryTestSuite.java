@@ -1,5 +1,6 @@
 package com.kodilla.testing.library;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -105,32 +106,48 @@ public class BookDirectoryTestSuite {
     }
 
 
-
+    @DisplayName("TestBookInHands")
     @Test
     void testlistBooksInHandsOf() {
 
         // Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        LibraryUser user = new LibraryUser("Pawel","S","99")
 
-        List<Book> resultListOfBooks0 = new ArrayList<Book>();                           // [2]
-        List<Book> resultListOfBooks1 = generateListOfNBooks(1);                       // [3]
-        List<Book> resultListOfBooks5 = generateListOfNBooks(5);                       // [4]
-        when(libraryDatabaseMock.listBooksInHandsOf(anyInt()))                    // [5]
-                .thenReturn(resultListOfBooks0);                                             // [6]
-        when(libraryDatabaseMock.listBooksInHandsOf(anyInt()))                    // [7]
-                .thenReturn(resultListOfBooks1);                                              // [8]
-        when(libraryDatabaseMock.listBooksInHandsOf(anyInt()))                   // [9]
-                .thenReturn(resultListOfBooks5);                                             // [10]
+        LibraryUser user = new LibraryUser("Pawel","A","99");
+        LibraryUser user2 = new LibraryUser("Marcin","B","98");
+        LibraryUser user3 = new LibraryUser("Olek","C","97");
+
+        List<Book> resultListOfBooks0 = new ArrayList<Book>();
+        List<Book> resultListOfBooks1 = generateListOfNBooks(1);
+        List<Book> resultListOfBooks5 = generateListOfNBooks(5);
+
+        when(libraryDatabaseMock.listBooksInHandsOf(user))
+                .thenReturn(resultListOfBooks0);
+        when(libraryDatabaseMock.listBooksInHandsOf(user2))
+                .thenReturn(resultListOfBooks1);
+        when(libraryDatabaseMock.listBooksInHandsOf(user3))
+                .thenReturn(resultListOfBooks5);
 
         // When
-        List<Book> theListOfBooks0 = bookLibrary.listBooksInHandsOf("Pawel","S","99");    // [11]
 
+        List <Book> lista  ;
+       lista = bookLibrary.listBooksInHandsOf(user);
+       int licznik=lista.size();
+
+        List <Book> lista2 ;
+        lista2 = bookLibrary.listBooksInHandsOf(user2);
+        int licznik2=lista2.size();
+
+
+        List <Book> lista3 ;
+        lista3 = bookLibrary.listBooksInHandsOf(user3);
+        int licznik3=lista3.size();
         // Then
 
-        assertEquals(0, theListOfBooks0.size());                                         // [14]
-        assertEquals(1, theListOfBooks1.size());                                       // [15]
-        assertEquals(5, theListOfBooks5.size());                                        // [16]
+        assertEquals(0, licznik);
+        assertEquals(1, licznik2);
+        assertEquals(5,  licznik3);
+
     }
 
 

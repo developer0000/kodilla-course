@@ -7,12 +7,12 @@ public class ShapeCollector {
 
 
 
-    private Shape shape;
+   // private Shape shape;
 
 
-    public ShapeCollector(Shape shape) {
+    public ShapeCollector() {
 
-        this.shape = shape;
+
     }
 
 
@@ -36,11 +36,15 @@ public class ShapeCollector {
     }
 
 
-    public void getFigure(int n)
+    public Shape getFigure(int n)
 
     {
 
-        lista.get(n);
+        if  (n< lista.size() && n>=0) {
+
+            return lista.get(n);
+        }
+        return  null;
     }
 
 
@@ -49,6 +53,18 @@ public class ShapeCollector {
         System.out.println("lista to"+lista.toString());
 
     }
+
+
+    public int getSize()
+
+    {
+
+
+        return  lista.size();
+    }
+
+
+
 
     @Override
     public String toString() {
