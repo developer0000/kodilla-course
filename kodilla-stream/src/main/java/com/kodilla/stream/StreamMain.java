@@ -11,8 +11,8 @@ public class StreamMain {
 
         public static void main(String[] args) {
             PoemBeautifier upiekszacz = new PoemBeautifier();
-            PoemDecorator dekorator =()-> (tekst)
 
-            upiekszacz.beautify("ABC",);
+
+            upiekszacz.beautify("ABC",tekst -> tekst+"ABC");
         }
 }
