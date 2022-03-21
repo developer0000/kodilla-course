@@ -7,8 +7,8 @@ public class ForumUser {
 
     int  identyfikator;
     String nazwaUzytkownika ;
-    char plec = 'M','F';
+    char plec = 'M';
     LocalDate dataUrodzenia;
-    int ilośćOpublikowanychPostów;
+    int iloscOpublikowanychPostow;
 
 }

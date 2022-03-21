@@ -1,19 +1,12 @@
 package com.kodilla.stream.beautifier;
 
-public class PoemBeautifier implements  PoemDecorator {
+public class PoemBeautifier  {
 
 
-    public String beautify(PoemDecorator decorator){
-        String  a=decorator.decorate("ala");
+    public String beautify(String textToBeautify, PoemDecorator decorator){
+        decorator.decorate(textToBeautify);
 
-        return  a;
-    }
-
-    @Override
-    public String decorate(String tekst) {
-        String b=tekst.toUpperCase();
-
-        return  b;
+return textToBeautify;
     }
 
 

@@ -8,7 +8,7 @@ public class Forum {
     public static List <ForumUser> getUserList(){
         List<ForumUser> lista = new ArrayList<>();
 
-        lista.add()
+        //lista.add()
 
 
         return new ArrayList<>(lista);

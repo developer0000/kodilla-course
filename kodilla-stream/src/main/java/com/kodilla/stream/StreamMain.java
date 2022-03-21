@@ -10,15 +10,16 @@ public class StreamMain {
 
 
         public static void main(String[] args) {
-
-            String tekst= "Ala ma kota";
+            //PoemDecorator decorator = new PoemBeautifier();
+//            String kot= decorator.decorate("abc");
+//            System.out.println(kot);
             PoemBeautifier upiekszacz = new PoemBeautifier();
-
-
-
-
-
-
-            upiekszacz.beautify(cos-> tekst+"ABC");
+            String cos = upiekszacz.beautify("ala", tekst ->  tekst+":)");
+            System.out.println( cos);
         }
 }
+
+
+
+
+
