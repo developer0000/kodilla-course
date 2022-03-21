@@ -10,9 +10,15 @@ public class StreamMain {
 
 
         public static void main(String[] args) {
+
+            String tekst= "Ala ma kota";
             PoemBeautifier upiekszacz = new PoemBeautifier();
 
 
-            upiekszacz.beautify("ABC",tekst -> tekst+"ABC");
+
+
+
+
+            upiekszacz.beautify(cos-> tekst+"ABC");
         }
 }
