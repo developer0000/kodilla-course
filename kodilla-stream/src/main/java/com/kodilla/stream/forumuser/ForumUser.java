@@ -7,13 +7,13 @@ public class ForumUser {
 
     int  identyfikator;
     String nazwaUzytkownika ;
-    char plec = 'M';
-    //LocalDate dataUrodzenia;
-    int dataUrodzenia;
+    char plec ;
+    LocalDate dataUrodzenia;
+    //int dataUrodzenia;
     int iloscOpublikowanychPostow;
 
 
-    public ForumUser(int identyfikator, String nazwaUzytkownika, char plec, int dataUrodzenia, int iloscOpublikowanychPostow) {
+    public ForumUser(int identyfikator, String nazwaUzytkownika, char plec, LocalDate dataUrodzenia, int iloscOpublikowanychPostow) {
         this.identyfikator = identyfikator;
         this.nazwaUzytkownika = nazwaUzytkownika;
         this.plec = plec;
@@ -23,5 +23,20 @@ public class ForumUser {
 
     public int getIdentyfikator() {
         return identyfikator;
+    }
+
+    public String getNazwaUzytkownika() {
+        return nazwaUzytkownika;
+    }
+
+    @Override
+    public String toString() {
+        return "ForumUser{" +
+                "identyfikator=" + identyfikator +
+                ", nazwaUzytkownika='" + nazwaUzytkownika + '\'' +
+                ", plec=" + plec +
+                ", dataUrodzenia=" + dataUrodzenia +
+                ", iloscOpublikowanychPostow=" + iloscOpublikowanychPostow +
+                '}';
     }
 }

@@ -14,8 +14,11 @@ public class StreamMain {
 //            String kot= decorator.decorate("abc");
 //            System.out.println(kot);
             PoemBeautifier upiekszacz = new PoemBeautifier();
-            String cos = upiekszacz.beautify("ala", tekst ->  tekst+":)");
-            System.out.println( cos);
+            upiekszacz.beautify("abc", tekst ->  tekst+":)");
+
+            upiekszacz.beautify("abc", tekst ->  tekst.toUpperCase()+":)");
+
+            upiekszacz.beautify("abc", tekst ->  "zzz "+tekst+" zzz");
         }
 }
 
