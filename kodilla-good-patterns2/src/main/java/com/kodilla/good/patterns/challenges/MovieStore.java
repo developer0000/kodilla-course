@@ -33,9 +33,7 @@ public class MovieStore {
 
     public static void main(String[] args) {
         MovieStore movieStore = new MovieStore();
-        movieStore.getMovies().forEach((key, value) -> {
-            String result = value.stream().collect(Collectors.joining("!"));
-            System.out.println(result);
-        });
+        String result = movieStore.getMovies().values().stream().flatMap(a -> a.stream()).collect(Collectors.joining("!"));
+        System.out.println(result);
+        };
     }
-}
