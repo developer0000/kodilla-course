@@ -5,9 +5,12 @@ import java.util.Objects;
 
 public class Product {
 
-    String name;
+    private String name;
+    private BigDecimal price;
 
-    BigDecimal price;
+    public BigDecimal getPrice() {
+        return price;
+    }
 
     @Override
     public boolean equals(Object o) {

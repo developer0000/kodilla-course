@@ -3,9 +3,9 @@ package food;
 public class Client {
 
 
-    String addrees ;
-    String name;
-    String surname;
+  private  String addrees ;
+  private String name;
+  private String surname;
 
 
 

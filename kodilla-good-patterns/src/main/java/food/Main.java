@@ -7,9 +7,9 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        Client client =  new Client("Pawel","Pawel", "PAwel");
+        Client client =  new Client("Krakow","Pawel", "Kowalski");
 
-        Supplier supplier = new ExtraFoodShop(" a","b", Map.of(new Product("klapki", BigDecimal.valueOf(20.01)),2)) ;
+        Supplier supplier = new ExtraFoodShop(" food","warszawa", Map.of(new Product("klapki", BigDecimal.valueOf(20.01)),2)) ;
 
         Order order = new Order(1,Map.of(new Product("klapki", BigDecimal.valueOf(20.01)),2)) ;
 

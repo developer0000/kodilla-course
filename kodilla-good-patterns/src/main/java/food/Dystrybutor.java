@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Dystrybutor {
 
-    List<Supplier> dostawcy = new ArrayList<>();
-    List<Order>  zamowienia = new ArrayList<>();
-    List <Client> klienci = new ArrayList<>();
+   private List<Supplier> dostawcy;
+   private List<Order>  zamowienia;
+   private List <Client> klienci;
 
     public Dystrybutor(List<Supplier> dostawcy, List<Order> zamowienia, List<Client> klienci) {
         this.dostawcy = dostawcy;
@@ -19,7 +19,7 @@ public class Dystrybutor {
     public void  processing ( ) {
 
         zamowienia.stream().forEach(z -> {
-            z.orders.forEach((key,value)->{
+            z.getOrders().forEach((key,value)->{
                 try {
                    Supplier supplier = dostawcy.stream().filter(d-> d.products.get(key)>=value ).findFirst().orElseThrow(()->new NoProductException("Product doesn't exist"));
                    supplier.proccess(key,value);

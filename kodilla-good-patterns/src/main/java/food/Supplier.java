@@ -7,8 +7,8 @@ import java.util.Map;
 
 public abstract class Supplier {
 
-    String companyName;
-    String address;
+    private String companyName;
+    private String address;
 
     Map<Product,Integer> products = new HashMap<>();
 
